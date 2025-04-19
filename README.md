@@ -6,16 +6,16 @@ The purpose of this project is to explore and analyze employee attrition data an
 
 ---
 
-## 🛠️ Tools and Libraries Used
+##  Tools and Libraries Used
 
 This project is implemented in a Jupyter Notebook using Python and the following libraries:
 
-- **Pandas**: Data manipulation and analysis
-- **NumPy**: Numerical operations
-- **Matplotlib & Seaborn**: Data visualization
-- **Scikit-learn**: Machine learning and preprocessing
-- **XGBoost**: Gradient boosting algorithm for classification
-- **Imbalanced-learn (SMOTE)**: Oversampling technique to balance classes
+- **Pandas**: Data manipulation and analysis  
+- **NumPy**: Numerical operations  
+- **Matplotlib & Seaborn**: Data visualization  
+- **Scikit-learn**: Machine learning and preprocessing  
+- **XGBoost**: Gradient boosting algorithm for classification  
+- **Imbalanced-learn (SMOTE)**: Oversampling technique to balance classes  
 
 ---
 
@@ -25,16 +25,16 @@ This project is implemented in a Jupyter Notebook using Python and the following
 - The dataset was loaded using Pandas.
 - Initial exploration included checking for missing values, understanding data types, and getting descriptive statistics.
 
-### 2. **Exploratory Data Analysis (EDA)**
+### 2. **Data Cleaning and Feature Engineering**
+- Unnecessary columns (e.g., Employee ID) were dropped.
+- Categorical variables were encoded using one-hot encoding.
+- Numerical features were scaled using `StandardScaler`.
+  
+### 3. **Exploratory Data Analysis (EDA)**
 - Visualizations were used to understand the distribution of features like:
   - Age, Gender, Education, Job Role, Department
   - Job Satisfaction, Monthly Income, Work-life Balance, etc.
 - Correlation analysis was performed to identify relationships between variables.
-
-### 3. **Data Cleaning and Feature Engineering**
-- Unnecessary columns (e.g., Employee ID) were dropped.
-- Categorical variables were encoded using one-hot encoding.
-- Numerical features were scaled using `StandardScaler`.
 
 ### 4. **Handling Class Imbalance**
 - The dataset showed imbalance between "Yes" and "No" in the attrition column.
@@ -42,18 +42,32 @@ This project is implemented in a Jupyter Notebook using Python and the following
 
 ---
 
-## Model Training and Evaluation
+##  Model Training and Evaluation
 
-### 1. **Model Selection**
-- An XGBoost Classifier was chosen for its efficiency and performance on classification tasks.
+### 1. **Train-Test Split**
+- The dataset was split into 80% training and 20% testing sets.
 
-### 2. **Training Process**
-- Data was split into training and testing sets (typically 80/20 split).
-- SMOTE was applied to the training data.
-- The model was trained using the balanced dataset.
+### 2. **Class Balancing**
+- SMOTE was used to oversample the minority class (Attrition = Yes) in the training set.
 
 ### 3. **Evaluation Metrics**
 - Accuracy, Precision, Recall, F1-Score, and Confusion Matrix were used to evaluate model performance.
-- The results demonstrated the model's ability to accurately predict employee attrition.
 
+---
+
+##  Machine Learning Models and Results
+
+The following classification models were trained and evaluated:
+
+| Model                     | Accuracy |
+|--------------------------|----------|
+| Logistic Regression       | ~84.0%   |
+| Decision Tree Classifier  | ~87.5%   |
+| Random Forest Classifier  | ~88.9%   |
+| XGBoost Classifier        | **~92.3%**   |
+
+ **Best Model**: **XGBoost Classifier**  
+XGBoost outperformed the other models with the highest accuracy and balanced performance across precision, recall, and F1-score.
+
+---
 
