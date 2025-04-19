@@ -19,7 +19,7 @@ This project is implemented in a Jupyter Notebook using Python and the following
 
 ---
 
-## 📊 Data Analysis and Preprocessing
+##  Data Analysis and Preprocessing
 
 ### 1. **Data Loading and Overview**
 - The dataset was loaded using Pandas.
