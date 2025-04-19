@@ -56,17 +56,20 @@ This project is implemented in a Jupyter Notebook using Python and the following
 
 ##  Machine Learning Models and Results
 
-The following classification models were trained and evaluated:
+The following classification models were trained and evaluated using balanced training data (via SMOTE) and standardized features. Below are the models ranked by accuracy:
 
-| Model                     | Accuracy |
-|--------------------------|----------|
-| Logistic Regression       | ~84.0%   |
-| Decision Tree Classifier  | ~87.5%   |
-| Random Forest Classifier  | ~88.9%   |
-| XGBoost Classifier        | **~92.3%**   |
+| Model                     | Accuracy Score (%) |
+|--------------------------|--------------------|
+| LightGBM                 | **75.85**          |
+| Gradient Boosting        | 75.59              |
+| Ada Boost                | 75.32              |
+| XGBoost                  | 75.23              |
+| Random Forest            | 74.64              |
+| Extra Trees              | 74.34              |
+| Support Vector Classifier (SVC) | 73.44        |
+| Logistic Regression       | 71.78              |
 
- **Best Model**: **XGBoost Classifier**  
-XGBoost outperformed the other models with the highest accuracy and balanced performance across precision, recall, and F1-score.
+ **Best Performing Model**: **LightGBM**
 
----
+LightGBM had the highest accuracy at **75.85%**. Though closely followed by Gradient Boosting and Ada Boost, LightGBM demonstrated a slight edge in performance. 
 
