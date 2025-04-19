@@ -47,8 +47,7 @@ This project is implemented in a Jupyter Notebook using Python and the following
 ### 1. **Train-Test Split**
 - The dataset was split into 80% training and 20% testing sets.
 
-### 2. **Class Balancing**
-- SMOTE was used to oversample the minority class (Attrition = Yes) in the training set.
+.
 
 ### 3. **Evaluation Metrics**
 - Accuracy, Precision, Recall, F1-Score, and Confusion Matrix were used to evaluate model performance.
